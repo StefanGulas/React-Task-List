@@ -7,27 +7,31 @@ function App() {
     {
         id: 1,
         text: 'Arztbesuch',
-        day: 'Feb 5th at 2:30pm',
+        day: '20.02.21 um 14:30 Uhr',
         reminder: true,
     },
     {
         id: 2,
         text: 'Elternsprechtag',
-        day: 'Feb 6th at 1:30pm',
+        day: '21.02.21 um 16:30 Uhr',
         reminder: true,
     }, 
     {
         id: 3,
         text: 'Essen kaufen',
-        day: 'Feb 5th at 2:30pm',
+        day: '22.02.21 um 10:30 Uhr',
         reminder: false,
     },
 ])
-  
+  const onDelete1= (id) => {
+    console.log('delete', id)
+  }  
+
+
   return (
     <div className="container">
-      <Header title="Task Tracker"/>
-      <Tasks tasks={tasks} />
+      <Header title="Task List"/>
+      <Tasks tasks={tasks} onDelete1={onDelete1} />
     </div>
   );
 }
