@@ -15,7 +15,8 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 3px solid rgb(74, 180, 70);
+  background-color: #245814;
   padding: 30px;
   border-radius: 5px;
 }
@@ -25,12 +26,13 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  color:rgb(183, 206, 182)
 }
 
 .btn {
   display: inline-block;
   background: #000;
-  color: #fff;
+  color: rgb(255, 251, 251);
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -59,6 +61,7 @@ body {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  color:rgb(40, 105, 37)
 }
 
 .task.reminder {
