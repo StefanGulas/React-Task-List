@@ -9,7 +9,7 @@ const Task = ({ task, onDelete1}) => {
            <FaTimes 
            style={{color: 'red', 
            cursor: 'pointer'}} 
-           onClick={onDelete1} 
+           onClick={() => onDelete1(task.id)} 
            />
            </h3>
            <p>{task.dueDate} </p>

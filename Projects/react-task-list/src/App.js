@@ -37,7 +37,7 @@ function App() {
     },
 ])
   const onDelete1= (id) => {
-    console.log('delete', id)
+    console.log('delete: ', id)
   }  
 
 
