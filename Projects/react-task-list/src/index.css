@@ -16,7 +16,7 @@ body {
   overflow: auto;
   min-height: 300px;
   border: 3px solid rgb(74, 180, 70);
-  background-color: #245814;
+  background-color: #539e35;
   padding: 30px;
   border-radius: 5px;
 }
@@ -67,9 +67,8 @@ body {
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid blue
 }
-
 .task h3 {
   display: flex;
   align-items: center;

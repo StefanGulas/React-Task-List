@@ -36,15 +36,24 @@ function App() {
       reminder: true,
     },
 ])
-  const onDelete1= (id) => {
-    console.log('delete: ', id)
+  const deleteTask= (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
   }  
+
+  const toggleReminder = (id) => {
+    setTasks(tasks.map((task) => task.id ===
+    id ? {...task, reminder: !task.reminder} : task))
+  }
 
 
   return (
     <div className="container">
       <Header title="Task List"/>
-      <Tasks tasks={tasks} onDelete1={onDelete1} />
+      { tasks.length > 0 ? 
+      <Tasks tasks={tasks} 
+      onDelete1={deleteTask} 
+      onToggle1={toggleReminder}/> : 
+      ('No Tasks to show')}
     </div>
   );
 }
