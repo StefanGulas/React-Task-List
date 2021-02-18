@@ -60,8 +60,9 @@ function App() {
     <div className="container">
       <Header onAdd={() => setShowAddTask(!showAddTask)} 
       title="ToDo List"
-      onAdd={() => setShowAddTask(!showAddTask)}
+      // onAdd1={() => setShowAddTask(!showAddTask)}
       showAdd={showAddTask}
+      onAdd1={() => setShowAddTask(true)}
       />
       {showAddTask && <AddTask onAdd1={addTask}
       />}

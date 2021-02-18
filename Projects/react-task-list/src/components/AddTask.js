@@ -1,6 +1,7 @@
 import {useState} from 'react'
+import Button from './Button'
 
-const AddTask = ({onAdd1, showAdd}) => {
+const AddTask = ({onAdd1, onAdd2}) => {
     const [taskName, setTaskName] = useState('')
     const [taskCategory, setTaskCategory] = useState('') 
     const [dueDate, setDueDate] = useState('')
@@ -11,7 +12,6 @@ const AddTask = ({onAdd1, showAdd}) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-
         if(!taskName) {
             alert('Please add a task')
             return
@@ -26,6 +26,7 @@ const AddTask = ({onAdd1, showAdd}) => {
         setTaskCategory('')
         setTaskRepetition('')
         setTaskName('')
+        // onAdd1 = true
 
     }
 
@@ -84,12 +85,13 @@ const AddTask = ({onAdd1, showAdd}) => {
             <div color='white'>
             <input type='submit' value='Save ToDo' 
             className='btn btn-block' 
-            showAdd={onclick}
+            // onSubmit={onAdd1}
             />
+            <Button onClick={onAdd2}>Hide</Button>
             </div>
 
         </form>
-    )
+   )
 }
 
 export default AddTask
