@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const AddTask = ({onAdd}) => {
+const AddTask = ({onAdd1, showAdd}) => {
     const [taskName, setTaskName] = useState('')
     const [taskCategory, setTaskCategory] = useState('') 
     const [dueDate, setDueDate] = useState('')
@@ -16,7 +16,7 @@ const AddTask = ({onAdd}) => {
             alert('Please add a task')
             return
         }
-        onAdd({taskName, taskCategory, dueDate,
+        onAdd1({taskName, taskCategory, dueDate,
         reminder, taskRepetition, isImportant, isComplete })
 
         setDueDate('')
@@ -65,7 +65,9 @@ const AddTask = ({onAdd}) => {
             </div>
             <div className='form-control'>
                 <label>Wiederholen</label>
-                <input type='text' 
+                <input 
+                type='text' 
+                checked={taskRepetition}
                 placeholder='Wiederholung einstellen'
                 value={taskRepetition} onChange={(e) => 
                 setTaskRepetition(e.target.value)}
@@ -81,7 +83,9 @@ const AddTask = ({onAdd}) => {
             </div>
             <div color='white'>
             <input type='submit' value='Save ToDo' 
-            className='btn btn-block' />
+            className='btn btn-block' 
+            showAdd={onclick}
+            />
             </div>
 
         </form>
